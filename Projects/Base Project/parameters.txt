@@ -1,0 +1,56 @@
+#########################################
+# This file contains all of the parameters for the barcode generation.
+#########################################
+# Initialization options:
+#########################################
+initialize_clearLogs = 1	#flag to clear old logs
+initialize_EMBOSSpath = /usr/local/bin/EMBOSS/bin
+				#location of the EMBOSS executables; if you don't
+				# know, try leaving empty or find path by typing
+				# "whereis palindrome" at the command line
+#########################################
+# General options:
+#########################################
+general_verbose = 1		#how much information to output to console screen
+general_logs = 1		#whether or not to generate a log file
+
+#########################################
+# Target finding parameters:
+#	These parameters determine what the script includes/excludes as good
+# candidates for barcode insertion locations.
+#########################################
+target_minGap = 300			#minimum size of gap between convergent CDS's
+target_maxGap = 2000			#maximum size of gap between convergent CDS's
+target_homRecombSize = 750		#size of flanking regions on either side of 
+					# target insertion point 
+target_locRep_Nmer = 2			#minimum size of repeated nmers to qualify
+					# as a local repitive region (see locRep_Reps)
+target_locRep_Reps = 6			#minimum number of repeated nmers to qualify
+					# as a local repitive region (see locRep_Reps)
+target_ORFbuffer = 400			#the size outside of the gap that should be 
+					# scanned for potential ORFs (note that this is
+					# in addition to scanning the entire gap region,
+					# which can be of a size defined above)
+target_minORFsize = 300			#minimum size of a potential ORF to be considered
+					# a problem
+target_maxORFsize = 2000		#maximum size of a potential ORF to be considered
+					# a problem
+target_lgRepBound = 5000		#range to search within for large repetitive
+					# elements
+target_lgRepMinSize = 100		#minimum size of large repetitive elements
+target_lgRepMaxSize = 500		#maximum size of large repetitive elements
+
+target_min_gap_identity_warning_length = 25 	#minimum number of bases for gap to genome 
+					# identity to generate a warning
+
+target_min_identity_warning = 90		#minimum percent identity needed to generate a 
+					#warning
+
+target_pam_site_sequence = NGG		#sequence used to identify a PAM site
+
+target_guide_RNA_length = 20			#length of the guide RNA sequence
+
+target_max_guide_RNA_matches = 16		#max number of base matches to accept a guide RNA
+
+target_small_RNA_seq_window = 10		#small window size to calculate depth of coverage
+target_large_RNA_seq_window = 100		#large window size to calculate	depth of coverage
