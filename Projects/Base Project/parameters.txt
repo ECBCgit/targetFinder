@@ -24,9 +24,9 @@ target_maxGap = 2000			#maximum size of gap between convergent CDS's
 target_homRecombSize = 750		#size of flanking regions on either side of 
 					# target insertion point 
 target_locRep_Nmer = 2			#minimum size of repeated nmers to qualify
-					# as a local repitive region (see locRep_Reps)
+					# as a local repetitive region (see locRep_Reps)
 target_locRep_Reps = 6			#minimum number of repeated nmers to qualify
-					# as a local repitive region (see locRep_Reps)
+					# as a local repetitive region (see locRep_Reps)
 target_ORFbuffer = 400			#the size outside of the gap that should be 
 					# scanned for potential ORFs (note that this is
 					# in addition to scanning the entire gap region,
