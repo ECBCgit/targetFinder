@@ -197,7 +197,10 @@ print "\n\n----cur seq: ".$seq->seq()."----\n\n";
 		print "\n\n------\n";
 		print "CDS #=$i\nHit #=$x\n";
 		print "Max Hits=$maxHits\n";
-
+	}
+	$i++; #increment counter
+} #end for loop going through each CDS
+#if no candidates found, return null
 if (@goodLocs==0) {
 	#update log and user on progress
 	update("none found!\n",$v,$log);
